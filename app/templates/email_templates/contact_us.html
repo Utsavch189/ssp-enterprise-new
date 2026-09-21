@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212;
+            /* Dark background */
+            color: #e5e7eb;
+            /* Light text */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header img {
+            width: 150px;
+            /* Adjusted width */
+            height: auto;
+            /* Aspect ratio maintained */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .header {
+            font-family: 'Ubuntu-Medium', sans-serif;
+            color: #60A5FA;
+            /* Light blue for primary text */
+            font-size: 24px;
+        }
+
+        .main {
+            padding: 20px;
+            background-color: #2d3748;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .main h2 {
+            color: #e5e7eb;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .main p {
+            color: #cbd5e1;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .main .info {
+            background-color: #1f2937;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+
+        .main .info strong {
+            color: #e5e7eb;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #60A5FA;
+            text-decoration: none;
+        }
+
+        .footer p {
+            margin-top: 15px;
+        }
+    </style>
+    <title>Contact Form Notification</title>
+</head>
+
+<body>
+    <main class="main">
+        <h2>New Contact Request</h2>
+        <p>Hi Team,</p>
+        <p>You have received a new contact request from {{user_name}}:</p>
+
+        <div class="info">
+            <p><strong>User Email:</strong> {{user_email}}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{user_message}}</p>
+        </div>
+
+        <p>Please respond to the user's query at your earliest convenience.</p>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; {{current_year}} SSP Enterprise. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

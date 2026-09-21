@@ -1,0 +1,19 @@
+<footer class="bg-gray-900 text-white py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center flex flex-col items-center justify-center">
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">SSP Enterprise</h3>
+            <p class="text-gray-400 mb-6 sm:mb-8 max-w-md mx-auto text-sm sm:text-base">
+                Committed to serving you better with quality products at the best price
+            </p>
+            <p class="text-blue-400 font-semibold">A Step towards Digital India</p>
+        </div>
+        <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+            <p>© <span id="curr_year"></span> SSP Enterprise. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const date = new Date();
+    document.getElementById("curr_year").innerText=date.getFullYear();
+</script>

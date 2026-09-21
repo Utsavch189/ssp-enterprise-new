@@ -1,0 +1,199 @@
+<nav class="bg-white border-gray-200">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+    <a href="/" class="flex items-center space-x-8 rtl:space-x-reverse">
+      <img src="/static/images/logo1.png" class="h-14" alt="Flowbite Logo" />
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button"
+      class="inline-flex items-center p-2 w-10 h-14 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15" />
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+        <li>
+          <a href="/" class="link block py-2 px-3 rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="/about"
+            class="link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">About</a>
+        </li>
+
+        <!-- Brochure Features -->
+        <button id="brochure-dropdown" data-dropdown-toggle="brochure"
+          class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+          Brochure
+          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+
+        <div id="brochure"
+          class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+          <ul class="py-2 text-sm text-gray-700" aria-labelledby="freaturedropdownLargeButton">
+            <li class="cursor-pointer">
+              <a href="/static/pdfs/SSP_Brochure.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Telecom & Networking Brochure</a>
+            </li>
+            <li class="cursor-pointer">
+              <a href="/static/pdfs/SSP_Poles.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Poles & Fixtures Brochure</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Brochure Features -->
+
+        <!-- sectors Dropdown -->
+        <button id="sectors-dropdown" data-dropdown-toggle="sectors"
+          class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">Products
+          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+
+        <div id="sectors" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+          <ul class="py-2 text-sm text-gray-700" id="sectors-ul" aria-labelledby="sectorsdropdownLargeButton">
+
+          </ul>
+        </div>
+        <!-- End sectors Dropdown -->
+
+        <li class="cursor-pointer">
+          <a data-modal-target="put-query-modal" data-modal-toggle="put-query-modal"
+            class="link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Put
+            Query</a>
+        </li>
+        <li>
+          <a href="/#contact"
+            class="link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact</a>
+        </li>
+
+        <!-- Admin Features -->
+        <button id="admin-features-dropdown" data-dropdown-toggle="admin-features"
+          class="flex hidden items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+          Features
+          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+
+        <div id="admin-features"
+          class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+          <ul class="py-2 text-sm text-gray-700" aria-labelledby="freaturedropdownLargeButton">
+            <li class="cursor-pointer" data-modal-target="addproduct-modal" data-modal-toggle="addproduct-modal">
+              <a class="block px-4 py-2 hover:bg-gray-100">Add Product</a>
+            </li>
+            <li class="cursor-pointer" data-modal-target="querydownload-modal" data-modal-toggle="querydownload-modal">
+              <a class="block px-4 py-2 hover:bg-gray-100">Export Query</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Admin Features -->
+
+        <!-- Admin Profile -->
+        <button id="admin-profile-dropdown" data-dropdown-toggle="admin-profile"
+          class="flex hidden items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+          Profile
+          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+
+        <div id="admin-profile"
+          class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+          <ul class="py-2 text-sm text-gray-700" aria-labelledby="profiledropdownLargeButton">
+            <li class="cursor-pointer" data-modal-target="changepswd-modal" data-modal-toggle="changepswd-modal">
+              <a class="block px-4 py-2 hover:bg-gray-100">Change Password</a>
+            </li>
+          </ul>
+          <div class="py-1">
+            <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">Sign
+              out</a>
+          </div>
+        </div>
+        <!-- End Admin Profile  -->
+
+        <div class="flex flex-col mt-2 sm:flex-row sm:mt-0 gap-5">
+          <li id="login_btn" class="hidden cursor-pointer">
+            <a href="/login"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center">Login</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  utils.get_session_data()
+    .then(data => {
+      if (data?.data?.user_id) {
+        document.getElementById('login_btn').classList.add('hidden');
+        console.log(data)
+        if (data?.data?.role === 'admin') {
+          document.getElementById('admin-profile-dropdown').classList.remove('hidden');
+          document.getElementById('admin-features-dropdown').classList.remove('hidden');
+        }
+      }
+      else {
+        document.getElementById('login_btn').classList.remove('hidden');
+        document.getElementById('admin-profile-dropdown').classList.add('hidden');
+        document.getElementById('admin-features-dropdown').classList.add('hidden');
+      }
+    })
+</script>
+<script>
+  const sectors = document.getElementById("sectors-ul");
+  async function getSectors() {
+    try {
+      const response = await fetch('/get-sectors')
+      const data = await response.json();
+      if (data) {
+        sectors.innerHTML = ''
+        data.map(v => {
+          sectors.innerHTML += `
+            <li>
+              <a href="/categories?sector=${v.id}" class="block px-4 py-2 hover:bg-gray-100">${v.name}</a>
+            </li>
+          `
+        })
+      }
+    } catch (error) {
+      console.log("getSectors() ", error)
+    }
+  }
+  getSectors();
+</script>
+<script>
+  const links = document.querySelectorAll('.link')
+  links.forEach(link => {
+    link.addEventListener("click", () => clicks(link))
+  })
+  function clicks(e) {
+    changeNavColor();
+  }
+  function changeNavColor() {
+    setTimeout(() => {
+      let browser_url = window.location.href;
+      console.log(browser_url)
+      links.forEach(link => {
+        if (link.href === browser_url) {
+          link.classList.add('text-blue-700');
+        }
+        else {
+          link.classList.remove('text-blue-700');
+        }
+      })
+    }, 100);
+  }
+  changeNavColor();
+</script>

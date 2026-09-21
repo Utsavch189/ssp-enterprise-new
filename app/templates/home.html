@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block styles %}
+<style>
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .float-animation {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .client-logo {
+        height: 100px;
+        width: 180px;
+        object-fit: contain;
+        background: white;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .client-logo:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-marquee {
+        display: flex;
+        animation: marquee 50s linear infinite;
+        min-width: 200%;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<!-- Hero Section -->
+<header
+    class="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <img src="/static/images/home_main.jpg" alt="Digital Network"
+        class="absolute inset-0 w-full h-full object-cover mix-blend-overlay scale-105">
+    <div class="relative container mx-auto px-4 sm:px-6 py-20 sm:py-32">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
+                Empowering <span class="text-blue-400">Digital India</span> with Excellence
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-gray-200 leading-relaxed px-4">
+                Leading provider of premium Electrical, Electronics, and Telecommunications equipment
+                with unmatched quality and competitive pricing.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+                <a href="/categories?sector-name=Telecom and Networking"
+                    class="inline-flex items-center justify-center bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                    Explore Telecom & Networking
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+                <a href="/categories?sector-name=Poles and Fixtures"
+                    class="inline-flex items-center justify-center bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                    Explore Poles & Fixtures 
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+                <!-- <a href="/static/pdfs/SSP_Brochure.pdf" target="_blank"
+                    class="inline-flex items-center justify-center bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-lg">
+                    View Brochure
+                    <i data-lucide="file-text" class="w-5 h-5 ml-2"></i>
+                </a>
+                <a href="#contact"
+                    class="inline-flex items-center justify-center bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    Contact Us
+                    <i data-lucide="phone" class="w-5 h-5 ml-2"></i>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-gray-50"></div>
+</header>
+
+<!-- Products Section -->
+<section id="products" class="py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-20 px-4">
+            <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Comprehensive Solutions
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-600">
+                Discover our wide range of high-quality products and services tailored to meet your needs
+            </p>
+        </div>
+        <div class="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Cables -->
+            <div
+                class="group bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div
+                    class="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 transform group-hover:rotate-6 transition-transform">
+                    <i data-lucide="cable" class="w-7 sm:w-8 h-7 sm:h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Cables & Connectivity</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed text-base sm:text-lg">
+                    Premium quality cables and connectivity solutions from leading brands for reliable performance.
+                </p>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>CAT 5, CAT 6, 6E cables</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>D-Link, Digisol, Syrotech</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>Fiber optic solutions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Network Equipment -->
+            <div
+                class="group bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div
+                    class="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 transform group-hover:rotate-6 transition-transform">
+                    <i data-lucide="server" class="w-7 sm:w-8 h-7 sm:h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Network Equipment</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed text-base sm:text-lg">
+                    Complete range of enterprise-grade switches, routers, and network components for seamless
+                    connectivity.
+                </p>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>24-port AC/DC switches</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>Cisco & Juniper routers</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>XFP & SFP solutions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CCTV Solutions -->
+            <div
+                class="group bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div
+                    class="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 transform group-hover:rotate-6 transition-transform">
+                    <i data-lucide="shield" class="w-7 sm:w-8 h-7 sm:h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">CCTV Solutions</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed text-base sm:text-lg">
+                    Authorized distributor of premium brands including Hikvision, Dahua, CP Plus & Matrix offering
+                    cutting-edge
+                    surveillance solutions.
+                </p>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>High-quality surveillance systems</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>Competitive market rates</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+                        <span>Professional installation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Manufacturing Section -->
+<section class="py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 leading-tight">
+                    Manufacturing <span class="text-blue-400">Excellence</span>
+                </h2>
+                <p class="text-gray-300 mb-8 sm:mb-10 text-base sm:text-lg leading-relaxed">
+                    SSP Enterprise a West Bengal based manufacturer and supplier specializing in high-quality steel
+                    swaged tubular and octagonal poles, designed for a wide range of applications, including
+                    telecom/electrical aerial alignment, CCTV installations, street and campus lighting, and more. In
+                    addition, the company offers an extensive range of metal-type aerial fixture assemblies and
+                    accessories.
+                    <br>
+                    <br>
+                    Our products are rigorously quality-checked by dedicated quality assurance professionals to ensure
+                    superior performance, durability, and longevity. Highly sought after across various industries, we
+                    offer these products in a diverse array of shapes, sizes, and configurations to meet the specific
+                    needs of our clients.
+                    <br>
+                    <br>
+                    Our notable clients- BSNL/ AIRTEL/ JIO/STATE ELECTRICITY DEPT and so on .
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="bg-white/10 p-5 sm:p-6 rounded-xl backdrop-blur-lg">
+                        <i data-lucide="ruler" class="w-7 sm:w-8 h-7 sm:h-8 text-blue-400 mb-4"></i>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Custom Heights</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">7m to 15m range to meet diverse needs</p>
+                    </div>
+                    <div class="bg-white/10 p-5 sm:p-6 rounded-xl backdrop-blur-lg">
+                        <i data-lucide="package" class="w-7 sm:w-8 h-7 sm:h-8 text-blue-400 mb-4"></i>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Complete Solutions</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">Including all necessary accessories</p>
+                    </div>
+                    <div class="bg-white/10 p-5 sm:p-6 rounded-xl backdrop-blur-lg">
+                        <i data-lucide="factory" class="w-7 sm:w-8 h-7 sm:h-8 text-blue-400 mb-4"></i>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">In-house Production</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">Quality control at every step</p>
+                    </div>
+                    <div class="bg-white/10 p-5 sm:p-6 rounded-xl backdrop-blur-lg">
+                        <i data-lucide="settings" class="w-7 sm:w-8 h-7 sm:h-8 text-blue-400 mb-4"></i>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Customization</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">Tailored to your specifications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="relative z-10 float-animation">
+                    <img src="/static/images/maufacture_section.jpg" alt="Manufacturing Facility"
+                        class="rounded-2xl shadow-2xl w-full">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+                    
+                    </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="relative z-10 float-animation">
+                    <img src="/static/images/maufacture_section_1.jpg" alt="Manufacturing Facility"
+                        class="rounded-2xl shadow-2xl w-full">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+                </div>
+                <div class="absolute inset-0 bg-blue-600/20 blur-3xl -z-10 transform rotate-12"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Logo Section -->
+{% include 'components/client_logos.html' %}
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 sm:gap-16">
+            <div class="lg:pr-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-gray-900">Let's Connect</h2>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed">
+                    We're committed to serving you better. Reach out to us for the best deals
+                    and professional service that meets your requirements.
+                </p>
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="flex gap-7 items-center">
+                        <img class="w-24 h-22" src="/static/images/indiamart_trust.jpg" alt="">
+                        <img class="w-24 h-22" src="/static/images/BIS.png" alt="">
+                        <img class="w-24 h-14" src="/static/images/gem-logo.webp" alt="">
+                    </div>
+                    <a class="flex items-center group cursor-pointer">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-blue-200 transition-colors flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Registered Office</h4>
+                            <p class="text-gray-600">11/0, Narendranath Ghosh Lane
+                                Kolkata - 700040</p>
+                        </div>
+                    </a>
+                    <a class="flex items-center group cursor-pointer">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-blue-200 transition-colors flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Branch Office</h4>
+                            <p class="text-gray-600">48/1, Nirmal Sengupta Sarani, Ramkrishna Garh, Kolkata, West Bengal, Pin - 700079</p>
+                        </div>
+                    </a>
+                    <a class="flex items-center group cursor-pointer" href="mailto:enterprisessp007@gmail.com">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-blue-200 transition-colors flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                            <p class="text-gray-600">hello@sspenterprise.in</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center group">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-blue-200 transition-colors flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                            <p class="text-gray-600">08045733548</p>
+                        </div>
+                    </div>
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed/v1/place?q=SSP+ENTERPRISE,22.6486358,88.4280692"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe> -->
+                    <div><iframe width="100%" style="border:0;" allowfullscreen="" loading="lazy" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=22.6486608,88.4280046+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps drone</a></iframe></div>
+
+                </div>
+            </div>
+            <div>
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-2xl border border-gray-100">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-gray-900">Send us a message</h3>
+                    <form class="space-y-5 sm:space-y-6" method="post" action="/submit-query"
+                        enctype="multipart/form-data">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your Name / Company Name<span
+                                    class="text-red-400">*</span></label>
+                            <input type="text" name="name" id="name" required placeholder="Your Name / Company Name"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your Contact No.<span
+                                    class="text-red-400">*</span></label>
+                            <input type="text" name="contact_no" id="contact_no" required placeholder="Your Contact"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your Email<span
+                                    class="text-red-400">*</span></label>
+                            <input type="email" name="email" id="email"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                placeholder="your@email.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your Message<span
+                                    class="text-red-400">*</span></label>
+                            <textarea name="message" rows="3" id="message" placeholder="Your message..." required
+                                class="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your GST No.</label>
+                            <input type="text" name="gst_no" id="gst_no" placeholder="Your GST"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Your Referral Mobile No.</label>
+                            <input type="text" name="referral_mobile" id="referral_mobile"
+                                placeholder="Your Referral Mobile"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Upload File</label>
+                            <input type="file" name="q_file" id="q_file" class="mt-1 block w-full">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 sm:py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-[1.02] focus:scale-[0.98] shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    lucide.createIcons();
+    utils.get_session_data()
+        .then(data => {
+            console.log(data)
+        })
+</script>
+{% endblock %}
